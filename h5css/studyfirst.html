@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css3 and h5 学习</title>
+    <link rel="stylesheet" href="../common.css">
+    <link rel="stylesheet" href="studyfirst.css">
+</head>
+<body>
+    <header id="f_head">
+        <h3>H5和CSS3个人学习</h3>
+        <h6>对优秀网站的设计的技术学习,对自己的补漏,让自己对技术达到化用！</h6>
+    </header>
+    <div id="f_wrap">
+        <div class="fw_left">
+            <ul class="fwl_html">
+                <li class="fwl_head">HTML 学习</li>
+                <li class="fwl_con"></li>
+            </ul>
+            <ul class="fwl_css">
+                <li class="fwl_head">CSS 学习</li>
+                <li class="fwl_con">position定位</li>
+            </ul>
+        </div>
+        <div class="fw_right">
+
+        </div>
+    </div>
+    <script src="../jquery-3.1.1.min.js"></script>
+    <script>
+        $(".fwl_con").click(function () {
+            $(".fw_left li").removeClass('select');
+            $(this).addClass('select')/*.siblings().removeClass('select')*/;
+        })
+    </script>
+</body>
+</html>

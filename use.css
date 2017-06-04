@@ -81,12 +81,12 @@ body{
 	height: 4.95rem;
 	/* border: 1px solid #fff; */
 	position: absolute;
-    transform: rotate(-45deg);
-    left: 14%;
-    top: 14%;
-    z-index: 2;
-    font-size: 0.7rem;
-    color: #fff;
+    	transform: rotate(-45deg) translate(0,0);
+    	left: 14%;
+    	top: 14%;
+    	z-index: 2;
+    	font-size: 0.7rem;
+    	color: #fff;
 }
 #wrap .wr_forth .inner_word{
 	width: 3.535rem;

@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>标题</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+    <link rel="stylesheet" href="../common.css">
+	<style>
+		body{
+			padding: 1rem;
+			background: #eee;
+			-o-user-select: none;
+			-ms-user-select: none;
+			-webkit-user-select: none;
+			user-select: none;
+			cursor: pointer;
+		}
+		header{
+			font-size: 1rem;
+			text-align: center;
+			color: green;
+			margin-top: 0.5rem;
+			height: 1.5rem;
+			line-height: 1.5rem;
+		}
+		h5{
+			color: red;
+		}
+		p{
+			text-indent: 1.4rem;
+			line-height: 1rem;
+			font-size: 0.7rem;
+		}
+		span{
+			color: yellow;
+		}
+		pre{
+			margin: 0.4rem 0;
+			font-size: 0.7rem;
+			color: blue;
+		}
+		canvas{
+			border: 1px solid red;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<header>canvas得到简单使用</header>
+		<canvas id="mycanvas" width="700" height="400"></canvas>
+		<section>
+			<h5>canvas的属性</h5>
+			<pre>&ltcanvas id="mycanvas" width="200" height="200"&gt &lt/canvas&gt</pre>
+			<p>canvas自身拥有width和height两个属性，同时也拥有H5所有主要的属性，例如：id、class、name等；javascript用其中建立的id在canvas中绘画</p>
+			<pre>var cvs=documnet.getElementById("mycanvas");</pre>
+			<pre>var ctx=cvs.getContext("2d");</pre>
+			<p>ctx.beginPath();</p>
+			<p>ctx.moveTo(x,y);</p>
+			<p>ctx.lineTo(x,y);</p>
+			<p>ctx.closePath();</p>
+			<p>ctx.fillStyle="red"//设置填充颜色</p>
+			<p>ctx.fill();//填充已经定义好的路线</p>
+			<p>ctx.lineWidth=20;</p>
+			<p>ctx.strokeStyle="green";</p>
+			<p>ctx.stroke();</p>
+		</section>
+		<section>
+			<h5>canvas简单图形的绘制</h5>
+			<p>方框的绘制</p>
+			<p>ctx.fillRect(x,y,w,h)</p>
+			<p>ctx.strokeRect(x,y,w,h)<p>
+			<p>圆形的绘制</p>
+			<p>arc(x,y,sa,ea,true/false);x,y为圆心坐标，r为半径，sa、ea为其实角度和结束角度，true为逆时针画圆，false为顺时针画圆</p>
+		</section>
+		<section>
+			<h5>贝塞尔曲线</h5>
+			<p>context.moveTo(x,y)</p>
+			<p>context.quadraticCureTo(cx,cy,ex,ey);二次贝塞尔曲线，一个控制点，一个结束点</p>
+			<p>bezierCurveTo(cx1,cy1,cx2,cy2,ex,ey);三次贝塞尔曲线，两个控制点，一个结束点</p>
+		</section>
+		<!-- <section>
+			<h5>文字的绘制</h5>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</section> -->
+	</div>
+	<script>
+		var cvs=document.getElementById("mycanvas");
+		var ctx=cvs.getContext("2d");
+		ctx.beginPath();
+		ctx.moveTo(100,100);
+		ctx.lineTo(100,200);
+		ctx.lineTo(150,250);
+		ctx.lineTo(200,200);
+		ctx.lineTo(200,100);
+		ctx.lineTo(100,100);
+		ctx.closePath();
+		ctx.fillStyle="green";
+		ctx.fill();
+		ctx.lineWidth=20;
+		ctx.strokeStyle="red";
+		ctx.stroke();
+
+	</script>
+</body>
+</html>

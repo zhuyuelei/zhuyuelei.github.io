@@ -38,9 +38,9 @@ body{width: 95%;height: 100%;min-width: 25rem; background-color: #F6F6F6}
     width: 73%;
     margin-right: 0.2rem;
 }
-.fw_left .fwl_html,.fw_left .fwl_css{
+.fw_left .fwl_html{
     width: 100%;
-    height: 7.7rem;
+    height: 16rem;
     margin: 0.3rem auto 0;
     padding: 1rem 0.25rem 0.25rem;
     position: relative;
@@ -65,6 +65,10 @@ body{width: 95%;height: 100%;min-width: 25rem; background-color: #F6F6F6}
     cursor: pointer;
     border-bottom: 1px solid #ddd;
     background-color: #F6F6F6;
+    -o-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 #f_wrap .fwl_con:hover{
     font-weight: bolder;
@@ -73,4 +77,9 @@ body{width: 95%;height: 100%;min-width: 25rem; background-color: #F6F6F6}
     font-weight: bolder;
     background-color: #A6E22E;
     color: white;
+}
+
+iframe{
+    width: 100%;
+    height: 100%;
 }

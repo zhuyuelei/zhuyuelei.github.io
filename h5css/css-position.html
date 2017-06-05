@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>标题</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+    <link rel="stylesheet" href="../common.css">
+	<style>
+	body{
+		padding: 1rem;
+		background: #ccc;
+		-o-user-select: none;
+		-ms-user-select: none;
+		-webkit-user-select: none;
+		user-select: none;
+		cursor: pointer;
+	}
+		header{
+			font-size: 1rem;
+			text-align: center;
+			color: green;
+			margin-top: 0.5rem;
+			height: 1.5rem;
+			line-height: 1.5rem;
+		}
+		h5{
+			color: red;
+		}
+		p{
+			text-indent: 1.4rem;
+			line-height: 1rem;
+			font-size: 0.7rem;
+		}
+		span{
+			color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<header>position的top、right、bottom、left问题</header>
+		<section>
+			<h5>top、right、bottom、left单独只用一个</h5>
+			<p>一、在position的情况下，一个标签中只用一个时，<span>(元素的宽高确定)</span>left确定距离父元素的左距，right是距离父元素的右距；top和bottom类似</p>
+			<p>当绝对定位时，就用left、right选取其中一个，top、right中选取一个，就可以对元素进行绝对定位</p>
+		</section>
+		<section>
+			<h5>position: absolute;设置自适应问题</h5>
+			<p>当元素的的width和height设置了数值之后那么元素的宽高就确定了（行标签除外），当没有确定宽高的情况下呢？</p>
+			<p>在元素中如果没有确定宽高可以通过position:absolute;中的left和right，top与bottom来确定宽高，</p>
+			<p>设置left确定子元素距离父标签左边距的值，right距离右边距的值；top和bottom类似。此时子元素的宽高决定于父元素的宽高，当父元素变化时，子元素也发生变化</p>
+			<p>子元素的width=父width-子left-子right</p>
+			<p>子元素的height=父height-子top-子bottom</p>
+		</section>
+	</div>
+</body>
+</html>
